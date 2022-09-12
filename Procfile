@@ -1,0 +1,1 @@
+web: gunicorn funny_blog.wsgi
