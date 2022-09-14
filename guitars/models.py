@@ -13,6 +13,7 @@ class Guitars(models.Model):
     guitar_image = CloudinaryField('image', null=False, blank=False)
     remaining_guitars = models.IntegerField(null=False, blank=False)
     price = models.IntegerField(null=False, blank=False)
+    status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='guitar_likes', blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
 

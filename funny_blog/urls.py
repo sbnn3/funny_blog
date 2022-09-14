@@ -1,4 +1,4 @@
-"""codestar URL Configuration
+"""funny_blog URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from guitars.views import GuitarsPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("blog.urls"), name="blog-urls"),
+    path('', include('blog.urls'), name='blog-urls'),
     path('summernote/', include('django_summernote.urls')),
-    path("accounts/", include("allauth.urls")),
+    path('guitars/', GuitarsPage.as_view(), name='guitars'),
+    path('accounts/', include('allauth.urls')),
 ]
