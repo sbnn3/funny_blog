@@ -10,18 +10,18 @@
         <div class="card mb-4">
             <div class="card-body">
                 <div class="image-container">
-                    {% if "placeholder" in post.image.url %}
+                    {% if "placeholder" in guitars.guitar_image.url %}
                     <img class="card-img-top"
                         src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                     {% else %}
-                    <img class="card-img-top" src=" {{ guitars.image.url }}">
+                    <img class="card-img-top" src=" {{ guitars.guitar_image.url }}">
                     {% endif %}
                     <div class="image-flash">
-                        <p class="author">Author: {{ guitars.author }}</p>
+                        <p class="author">Author: {{ guitars.artist }}</p>
                     </div>
                 </div>
                 <a href="#" class="post-link">
-                    <h2 class="card-title">{{ guitars.model }}</h2>
+                    <h2 class="card-title">{{ guitars.guitar_model }}</h2>
                     <p class="card-text">{{ guitars.price }}</p>
                 </a>
                 <hr />
