@@ -25,7 +25,7 @@ body {
 }
 
 .main-bg {
-    background-color: #ffffff;
+    background-color: #c0c0c0;
 }
 
 .card {
@@ -43,6 +43,11 @@ body {
     min-width: 30%;
     left: -2px;
     background-color: #47b127;
+}
+
+.logo_image {
+    width: 800px;
+    height: 900px;
 }
 
 .author {
