@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.db.models import Q
 from .models import BlogPost
 from .forms import CommentForm
 
@@ -12,7 +13,6 @@ class BlogPage(generic.ListView):
     queryset = BlogPost.objects.filter(status=1).order_by('-created_on')
     template_name = 'blog.html'
     paginate_by = 6
-
 
 class BlogPostPage(View):
 

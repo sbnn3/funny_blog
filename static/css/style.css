@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Bebas+Neue&display=swap');
 
-body {
-    font-family: Alegreya, sans-serif;
-    background-color: #ffffff;
-}
-
 .brand {
     font-family: Bebas Neue, sans-serif;
     font-size: 2.5rem;
@@ -21,7 +16,7 @@ body {
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: rgb(209, 207, 75);
 }
 
 .dark-bg {
@@ -56,10 +51,7 @@ body {
 }
 
 .main-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    width: 70%;
 }
 
 .masthead {
@@ -96,10 +88,18 @@ body {
     z-index: 100;
 }
 
-.navbar {
-    background-color: transparent;
+nav {
+    font-family: Bebas Neue, sans-serif;
+    font-size: x-large;
+    font-weight: 700;
+    background-color: #d3a72d;
 }
 
+.navbar-nav, .navbar-centre {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 .post-link {
     text-decoration: none;
