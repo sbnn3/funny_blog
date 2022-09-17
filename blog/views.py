@@ -26,7 +26,7 @@ class BlogPostPage(View):
 
         return render(
             request, 
-            "blog_page_detail.html",
+            "blog-post.html",
             {
                 "post": post,
                 "comments": comments,
@@ -58,7 +58,7 @@ class BlogPostPage(View):
 
         return render(
             request, 
-            "blog_page_detail.html",
+            "blog-post.html",
             {
                 "post": post,
                 "comments": comments,
