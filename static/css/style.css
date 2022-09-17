@@ -12,6 +12,10 @@ body {
     color: #e7e300;
 }
 
+#blog_green {
+    color: #029c54;
+}
+
 .red-o {
     color: #029c54;
 }
@@ -25,7 +29,7 @@ body {
 }
 
 .main-bg {
-    background-color: #c0c0c0;
+    background-color: #ffffff;
 }
 
 .card {
@@ -43,11 +47,6 @@ body {
     min-width: 30%;
     left: -2px;
     background-color: #47b127;
-}
-
-.logo_image {
-    width: 800px;
-    height: 900px;
 }
 
 .author {
@@ -91,7 +90,7 @@ body {
 }
 
 .navbar {
-    background-color: rgb(146, 192, 204);
+    background-color: transparent;
 }
 
 
