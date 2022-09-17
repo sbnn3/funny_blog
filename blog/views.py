@@ -1,20 +1,23 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import BlogPost
 from .forms import CommentForm
 
-class PostList(generic.ListView):
-    model = Post
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'index.html'
+def home_page(request):
+    return render(request, 'index.html')
+
+class BlogPage(generic.ListView):
+    model = BlogPost
+    queryset = BlogPost.objects.filter(status=1).order_by('-created_on')
+    template_name = 'blog.html'
     paginate_by = 6
 
 
-class PostDetail(View):
+class BlogPostPage(View):
 
     def get(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
+        queryset = BlogPost.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_on')
         liked = False
@@ -23,7 +26,7 @@ class PostDetail(View):
 
         return render(
             request, 
-            "post_detail.html",
+            "blog_page_detail.html",
             {
                 "post": post,
                 "comments": comments,
@@ -34,7 +37,7 @@ class PostDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
+        queryset = BlogPost.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_on')
         liked = False
@@ -55,7 +58,7 @@ class PostDetail(View):
 
         return render(
             request, 
-            "post_detail.html",
+            "blog_page_detail.html",
             {
                 "post": post,
                 "comments": comments,
@@ -65,7 +68,7 @@ class PostDetail(View):
             },
         )
 
-class PostLike(View):
+class LikeBlogPost(View):
 
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
@@ -75,4 +78,4 @@ class PostLike(View):
         else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('blog_post', args=[slug]))
