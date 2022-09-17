@@ -55,6 +55,13 @@ body {
     text-transform: uppercase;
 }
 
+.main-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .masthead {
     margin-top: 10px;
     overflow: hidden;
