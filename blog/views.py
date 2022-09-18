@@ -25,7 +25,7 @@ class BlogPostPage(View):
             liked = True
 
         return render(
-            request, 
+            request,
             "blog-post.html",
             {
                 "post": post,

@@ -20,7 +20,7 @@
                         <p class="author">Author: {{ guitars.artist }}</p>
                     </div>
                 </div>
-                <a href="#" class="post-link">
+                <a href="{% url 'guitars-post' guitars.slug %}" class="post-link">
                     <h2 class="card-title">{{ guitars.guitar_model }}</h2>
                     <p class="card-text">{{ guitars.price }}</p>
                 </a>
