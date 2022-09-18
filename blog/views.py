@@ -1,7 +1,6 @@
-from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from django.db.models import Q
 from .models import BlogPost
 from .forms import CommentForm
 
