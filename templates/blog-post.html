@@ -37,7 +37,7 @@
                     <div class="col-1">
                         <strong>
                             {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                            <form class="d-inline" action="{% url 'blog_like' post.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
 

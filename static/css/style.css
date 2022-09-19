@@ -27,13 +27,34 @@
     background-color: #ffffff;
 }
 
-.card {
-    border: none;
-    background-color: transparent;
-}
-
 .image-container {
     position: relative;
+}
+
+.guitar-zone {
+    height: auto;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.guitar-card {
+    line-height: 40px;
+}
+
+.guitar-card h2 {
+    font-family: Alegreya, sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.guitar-card p {
+    font-size: 1em;
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 3px 0;
 }
 
 .image-flash {
