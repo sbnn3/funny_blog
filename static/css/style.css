@@ -31,6 +31,10 @@
     position: relative;
 }
 
+.guitar_display {
+    align-items: center;
+}
+
 .guitar-zone {
     height: auto;
     margin: 0 auto;
@@ -41,6 +45,7 @@
     line-height: 40px;
 }
 
+.all_guitars h2,
 .guitar-card h2 {
     font-family: Alegreya, sans-serif;
     font-weight: 900;
@@ -49,6 +54,7 @@
     text-transform: uppercase;
 }
 
+.all_guitars p,
 .guitar-card p {
     font-size: 1em;
     display: flex;
