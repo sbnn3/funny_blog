@@ -33,7 +33,7 @@ class GuitarsPagePost(View):
 class LikeGuitarPost(View):
 
     def post(self, request, slug):
-        guitars = get_object_or_404(GuitarsPage, slug=slug)
+        guitars = get_object_or_404(Guitars, slug=slug)
 
         if guitars.likes.filter(id=request.user.id).exists():
             guitars.likes.remove(request.user)
