@@ -3,38 +3,56 @@
 {% block content %}
 
 <!-- GUITARS -->
-<div class="col-12 mt-3">
-    <div class="row guitar_display">
-    {% for guitars in guitars_list %} 
-    <div class="col-md-6 col-lg-4">
-        <div class="card mb-4">
-            <div class="card-body all_guitars">
-                <div class="image-container">
-                    <img class="card-img-top" src=" {{ guitars.guitar_image.url }}">
-                    <div class="image-flash">
-                        <p class="author">Author: {{ guitars.artist }}</p>
+    <div class="col-12 guitar-zone">
+        <div class="row guitar_display new-submission">
+            <!--NEW GUITAR SUBMISSION FIELD-->
+            {% if user.is_authenticated %}
+            <div class="col-sm-6">
+                <div class="card mb-4">
+                    <div class="card-body all_guitars">
+                        <h2>Submit your guitar:</h2>
+                        <hr/>
+                        <p>You would like to share something?</p>
+                        <p>Just click the below button!</p>
+                        <br>
+                        <button></button>
                     </div>
                 </div>
-                <a href="{% url 'guitars-post' guitars.slug %}" class="post-link">
-                    <h2 class="card-title">{{ guitars.guitar_model }}</h2>
-                </a>
-                <hr />
-                <p class="card-text">Price: €{{ guitars.price }}</p>
-                <p class="card-text">Remaining Guitars: {{ guitars.remaining_guitars }}</p>
-                    <p class="card-text text-muted h6">{{ guitars.created_on}} <i class="far fa-heart"></i>
-                        {{ guitars.number_of_likes }}</p>
             </div>
         </div>
-    </div>    
-    {% if forloop.counter|divisibleby:3 %}
+        {% endif %}
     </div>
-    <div class="row">
-    {% endif %}
-    {% endfor %}
-    </div>
-</div>
-</div>
 
+    <!--Guitar-Cards-->
+    <div class="container-fluid">
+        <div class="row guitar_display">
+            {% for guitars in guitars_list %}
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-4">
+                    <div class="card-body all_guitars">
+                        <div class="image-container">
+                            <img class="card-img-top" src="{{ guitars.guitar_image.url }}" alt="{{ guitars.guitar_model }}">
+                            <div class="image-flash">
+                                <p>Artist: {{ guitars.artist }}</p>
+                            </div>
+                        </div>
+                        <a href="{% url 'guitars-post' guitars.slug %}" class="print-link">
+                            <h2>{{ guitars.guitar_model }}</h2>
+                        </a>
+                        <hr/>
+                        <p>Remaining Copies: {{ guitars.remaining_guitars }}</p>
+                        <p>Price: €{{ guitars.price }}</p>
+                        <p class="card-text text-muted h6"><i class="far fa-heart"> {{ guitars.number_of_likes }}</i></p>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:4 %}
+        </div>
+        <div class="row guitar_display">
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 
 {% if is_paginated %}
 <nav aria-label="Page navigation">
