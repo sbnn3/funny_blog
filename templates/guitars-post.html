@@ -15,8 +15,8 @@
                         <img class="card-img-top" src="{{ guitars.guitar_image.url }}" alt="{{ guitars.guitar_model }}">
                         <p><strong>Artist:</strong> {{ guitars.artist }}</p>
                         <hr/>
-                        <p><strong>Remaining Guitars:</strong> {{ guitars.remaining_guitars }}</p>
-                        <p><strong>Price:</strong> €{{ guitars.price }}</p>
+                        <p>Remaining Guitars: <strong>{{ guitars.remaining_guitars }}</strong></p>
+                        <p>Price: <strong>€{{ guitars.price }}</strong></p>
                         <p>{{ guitars.description | safe }}</p>
                         <br/>
                         <strong>
