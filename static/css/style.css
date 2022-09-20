@@ -51,14 +51,12 @@
     font-weight: 900;
     letter-spacing: 1px;
     font-size: 1.5em;
-    text-transform: uppercase;
 }
 
 .all_guitars p,
 .guitar-card p {
     font-size: 1em;
     display: flex;
-    text-transform: uppercase;
     letter-spacing: 2px;
     margin: 3px 0;
 }
