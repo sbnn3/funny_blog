@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load cloudinary %}
+
+<div class="col-12 guitar-zone">
+    <div class="row submission-form">
+        <!--NEW GUITAR SUBMIT FIELD-->
+        {% if user.is_authenticated %}
+        <div class="col-sm-12">
+            <div class="card mb-4">
+                <div class="card-body all_guitars">
+                    <h2>Edit your guitar post:</h2>
+                    <hr/>
+                    <form method="POST" style="margin: 1.3em;" enctype="multipart/form-data">
+                        {{ edit_form | crispy }}
+                        {% csrf_token %}
+                        <br/>
+                        <center><button type="submit" class="btn btn-signup right">Submit Changes</button></center>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

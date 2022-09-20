@@ -33,6 +33,27 @@ def submit_guitar(request):
         },  
     )
 
+def edit_guitar_post(request, slug):
+    guitars = get_object_or_404(Guitars, slug=slug)
+    edit_form = SubmitGuitarForm(request.POST or None, instance=guitars)
+    context = {
+        'edit_form': edit_form,
+        'guitars': guitars
+    }
+
+    if request.method == 'POST':
+        edit_form = SubmitGuitarForm(
+            request.POST, request.FILES, instance=guitars)
+        if edit_form.is_valid():
+            guitars = edit_form.save(commit=False)
+            guitars.artist = request.user
+            guitars.save()
+            return redirect('guitars')
+    else:
+        edit_form = SubmitGuitarForm(instance=guitars)
+
+    return render(request, 'edit-guitar.html', context)
+
 
 class GuitarsPagePost(View):
 
