@@ -153,6 +153,10 @@ nav {
     color: lightgray;
 }
 
+.submssion-form {
+    justify-content: center;
+}
+
 .btn-signup {
     background-color: #23BBBB;
     color: #fff;
