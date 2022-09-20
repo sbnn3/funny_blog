@@ -44,7 +44,8 @@
                         <hr/>
                         <button onclick="location.href='{% url 'edit-guitar' guitars.slug %}'" 
                         type="button" class="btn btn-signup right">EDIT</button>
-
+                        <button onclick="location.href='{% url 'delete-guitar' guitars.slug %}'" 
+                        type="button" class="btn btn-signup right">DELETE</button>
                         {% endif %}
                     </div>
                 </div>
