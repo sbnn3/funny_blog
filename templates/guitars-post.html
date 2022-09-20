@@ -37,16 +37,15 @@
                             {% else %}
                             <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
-
-                            {% if request.user == guitars.artist %}
-                            <hr/>
-                            <button onclick="location.href='{% url 'edit-guitar' guitars.slug %}'" 
-                            type="button" class="btn btn-signup right">EDIT</button>
-
-                            {% endif %}
                         <!-- The number of likes goes before the closing strong tag -->
                         <span class="text-secondary">{{ guitars.number_of_likes }} </span>
                         </strong>
+                        {% if request.user == guitars.artist %}
+                        <hr/>
+                        <button onclick="location.href='{% url 'edit-guitar' guitars.slug %}'" 
+                        type="button" class="btn btn-signup right">EDIT</button>
+
+                        {% endif %}
                     </div>
                 </div>
             </div>

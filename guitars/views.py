@@ -55,6 +55,12 @@ def edit_guitar_post(request, slug):
     return render(request, 'edit-guitar.html', context)
 
 
+def delete_guitar_post(request, slug):
+    guitars = get_object_or_404(Guitars, slug=slug)
+    guitars.delete()
+    return redirect('guitars')
+
+
 class GuitarsPagePost(View):
 
     def get(self, request, slug, *args, **kwargs):
