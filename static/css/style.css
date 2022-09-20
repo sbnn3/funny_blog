@@ -126,6 +126,19 @@ nav {
     transform: translateX(-50%);
 }
 
+.play_mobile {
+    display: none;
+}
+
+.menu-btn-ctn {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.menu-btn-ctn li {
+    text-align: center;
+}
+
 .new-submission {
     justify-content: center;
     text-align: center;
