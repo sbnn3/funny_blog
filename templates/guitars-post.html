@@ -13,11 +13,11 @@
                     <hr/>
                     <div class="image-container">
                         <img class="card-img-top" src="{{ guitars.guitar_image.url }}" alt="{{ guitars.guitar_model }}">
-                        <p>Artist: {{ guitars.artist }}</p>
+                        <p><strong>Artist:</strong> {{ guitars.artist }}</p>
                         <hr/>
-                        <p>Remaining Guitars: {{ guitars.remaining_guitars }}</p>
-                        <p>Price: €{{ guitars.price }}</p>
-                        <p>Description: {{ guitars.description | safe }}</p>
+                        <p><strong>Remaining Guitars: </strong> {{ guitars.remaining_guitars }}</p>
+                        <p><strong>Price: </strong> €{{ guitars.price }}</p>
+                        <p>{{ guitars.description | safe }}</p>
                         <br/>
                         <strong>
                             {% if user.is_authenticated %}
