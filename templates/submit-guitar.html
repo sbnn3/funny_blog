@@ -7,16 +7,17 @@
     <div class="row submission-form">
         <!--NEW GUITAR SUBMIT FIELD-->
         {% if user.is_authenticated %}
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <div class="card mb-4">
                 <div class="card-body all_guitars">
                     <h2>Submit your guitar:</h2>
                     <hr/>
                     <p>Just click the below button!</p>
                     <form method="POST" style="margin: 1.3em;" enctype="multipart/form-data">
-                    {{ submission_form | crispy }}
-                    {{ csrf_token }}
-                    <button type="submit" class="btn btn-signup right">Submit</button>
+                        {{ submission_form | crispy }}
+                        {% csrf_token %}
+                        <br/>
+                        <center><button type="submit" class="btn btn-signup right">Submit</button></center>
                     </form>
                 </div>
             </div>
