@@ -274,4 +274,17 @@ nav {
     h3 {
         font-size: large;
     }
+
+    /* NAVBAR */
+
+    .nav {
+        font-size: large;
+        padding: 5px 38px;
+    }
+
+    /* MAIN IMAGE */
+
+    .main_image img {
+        top: -325px;
+    }
 }
