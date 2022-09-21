@@ -132,6 +132,21 @@
     z-index: 100;
 }
 
+#main-image {
+    width: 90%;
+    height: 600px;
+    margin: 0 auto;
+    contain: content;
+
+}
+
+#main-image img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -500px;
+}
+
 nav {
     font-family: Bebas Neue, sans-serif;
     font-size: x-large;
