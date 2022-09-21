@@ -75,8 +75,18 @@
     text-transform: uppercase;
 }
 
-.main-image {
-    width: 70%;
+.main_image {
+    width: 90%;
+    height: 600px;
+    margin: 0 auto;
+    contain: content;
+}
+
+.main_image img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -500px;
 }
 
 .about-pg {
@@ -238,4 +248,11 @@ nav {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+/* LARGE SCREENS */
+@media screen and (max-width:1200px) {
+    .nav {
+        padding: 5px 40px;
+    }
 }
