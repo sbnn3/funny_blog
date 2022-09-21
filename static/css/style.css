@@ -85,7 +85,7 @@
 .main-image img {
     width: 100%;
     height: auto;
-    position: relative;
+    /* position: relative; */
     top: -500px;
 }
 
