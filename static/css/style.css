@@ -79,6 +79,38 @@
     width: 70%;
 }
 
+.about-pg {
+    width: 90%;
+    margin: auto;
+}
+
+.about-pg h2 {
+    font-family: Alegreya, sans-seris;
+    color: #962dd3;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: -13px;
+}
+
+.about-pg p {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+.about-img {
+    height: 600px;
+    margin: 0 auto;
+    contain: content;
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -25px;
+}
+
 .masthead {
     margin-top: 10px;
     overflow: hidden;
