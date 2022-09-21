@@ -16,7 +16,7 @@
 }
 
 .light-bg {
-    background-color: rgb(209, 207, 75);
+    background-color: #d19a24;
 }
 
 .dark-bg {
@@ -147,7 +147,7 @@ nav {
     font-family: Bebas Neue, sans-serif;
     font-size: x-large;
     font-weight: 700;
-    background-color: #d3a72d;
+    background-color: #d19a24;
 }
 
 .navbar-nav, .navbar-centre {
