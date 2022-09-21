@@ -84,15 +84,6 @@
     margin: auto;
 }
 
-.about-pg h2 {
-    font-family: Alegreya, sans-seris;
-    color: #962dd3;
-    font-size: 2em;
-    text-transform: uppercase;
-    font-weight: 300;
-    margin-top: -13px;
-}
-
 .about-pg p {
     font-size: 1.2em;
     letter-spacing: 1px;
@@ -198,6 +189,20 @@ nav {
 
 .submssion-form {
     justify-content: center;
+}
+
+.social_network {
+    text-align: center;
+}
+
+.social_network li {
+    display: inline;
+}
+
+.social_network i {
+    font-size: large;
+    padding: 6px;
+    color: white;
 }
 
 .btn-signup {
