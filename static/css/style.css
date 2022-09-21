@@ -153,25 +153,6 @@ nav {
     background-color: #d3a72d;
 }
 
-.navbar-nav, .navbar-centre {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.play_mobile {
-    display: none;
-}
-
-.menu-btn-ctn {
-    text-align: center;
-    padding-top: 15px;
-}
-
-.menu-btn-ctn li {
-    text-align: center;
-}
-
 .new-submission {
     justify-content: center;
     text-align: center;
@@ -250,52 +231,8 @@ nav {
     border: none;
 }
 
-/* LARGE SCREENS */
-@media screen and (max-width:1200px) {
-    .nav {
-        padding: 5px 40px;
-    }
-
-    .main_image {
-        background-position-y: -420px;
-    }
-}
-
-/* MEDIUM SCREENS: LAPTOPS AND TABLETS */
-
-@media screen and (max-width:950px) {
-    h1 {
-        font-family: Alegreya, sans-serif;
-        font-weight: 800px;
-        letter-spacing: 2px;
-        font-size: 2em;
-    }
-
-    h3 {
-        font-size: large;
-    }
-
-    /* NAVBAR */
-
-    .nav {
-        font-size: large;
-        padding: 5px 38px;
-    }
-
-    /* MAIN IMAGE */
-
-    .main_image img {
-        top: -325px;
-    }
-}
-
-/* SMALL SCREENS: MOBILE DEVICES */
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 1.7em;
-    }
-
-    .play_mobile {
-        display: block;
+@media screen and (max-width: 700px) {
+    textarea {
+        width: 75%;
     }
 }
