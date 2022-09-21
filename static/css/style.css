@@ -288,3 +288,14 @@ nav {
         top: -325px;
     }
 }
+
+/* SMALL SCREENS: MOBILE DEVICES */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.7em;
+    }
+
+    .play_mobile {
+        display: block;
+    }
+}
