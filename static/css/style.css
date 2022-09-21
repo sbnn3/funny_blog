@@ -27,6 +27,13 @@
     background-color: #ffffff;
 }
 
+.main-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -500px;
+}
+
 .image-container {
     position: relative;
 }
@@ -73,20 +80,6 @@
     color: white;
     margin: 4px;
     text-transform: uppercase;
-}
-
-.main-image {
-    width: 90%;
-    height: 600px;
-    margin: 0 auto;
-    contain: content;
-}
-
-.main-image img {
-    width: 100%;
-    height: auto;
-    /* position: relative; */
-    top: -500px;
 }
 
 .about-pg {
@@ -235,4 +228,10 @@ nav {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+@media screen and (max-width: 700px) {
+    textarea {
+        width: 75%;
+    }
 }
