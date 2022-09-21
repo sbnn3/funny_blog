@@ -98,6 +98,17 @@
     top: -25px;
 }
 
+#background_video {
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+    overflow: hidden;
+}
+
 .masthead {
     margin-top: 10px;
     overflow: hidden;
@@ -130,21 +141,6 @@
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
-}
-
-#main-image {
-    width: 90%;
-    height: 600px;
-    margin: 0 auto;
-    contain: content;
-
-}
-
-#main-image img {
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: -500px;
 }
 
 nav {
@@ -236,10 +232,4 @@ nav {
     color: #E84610;
     background: transparent;
     border: none;
-}
-
-@media screen and (max-width: 700px) {
-    textarea {
-        width: 75%;
-    }
 }
