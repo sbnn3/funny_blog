@@ -7,6 +7,9 @@ from .forms import CommentForm
 def home_page(request):
     return render(request, 'index.html')
 
+def about_page(request):
+    return render(request, 'about.html')
+
 class BlogPage(generic.ListView):
     model = BlogPost
     queryset = BlogPost.objects.filter(status=1).order_by('-created_on')
