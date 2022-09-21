@@ -27,13 +27,6 @@
     background-color: #ffffff;
 }
 
-.main-image {
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: -500px;
-}
-
 .image-container {
     position: relative;
 }
