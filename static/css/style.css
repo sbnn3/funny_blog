@@ -153,6 +153,12 @@ nav {
     background-color: #d3a72d;
 }
 
+.navbar-nav, .navbar-centre {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .new-submission {
     justify-content: center;
     text-align: center;
