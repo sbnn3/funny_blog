@@ -255,4 +255,23 @@ nav {
     .nav {
         padding: 5px 40px;
     }
+
+    .main_image {
+        background-position-y: -420px;
+    }
+}
+
+/* MEDIUM SCREENS: LAPTOPS AND TABLETS */
+
+@media screen and (max-width:950px) {
+    h1 {
+        font-family: Alegreya, sans-serif;
+        font-weight: 800px;
+        letter-spacing: 2px;
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: large;
+    }
 }
