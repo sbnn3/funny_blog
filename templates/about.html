@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="col about-pg">
+    <div class="row">
+        <div class="col-md-8 about-img">
+            <img src="{% static 'images/about-img.jpeg' %}" alt="Guitars Blog and Shop">
+        </div>
+        <div class="col-md-4">
+            <h2>ABOUT: </h2>
+            <p>Welcome to <span class="brand">Funny</span><span class="red-o">Blog!</span>
+            <br/>
+                Welcome to Funny Blog! Here you will be able to find the newest blogs and the most interesting products for sale.
+            </p>
+            <p>
+                Funny Blog collaborates with all artists who want to share their creativity, hard work and hobbies.
+            </p>
+            </br/>
+            <p>
+                If you want to see what's new happening in blog section, please access <a href="{% url 'blog' %}">blog</a> for all the latest updates.
+            </p>
+            <br/>
+            <p>
+                And if you would like to share your guitars, do not hesitate to access <a href="{% url 'guitars' %}">guiars</a> for all posts and create post possibility.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
