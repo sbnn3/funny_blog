@@ -154,7 +154,7 @@ nav {
 }
 
 .navbar-nav, .navbar-centre {
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
 }
