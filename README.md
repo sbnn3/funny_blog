@@ -148,6 +148,19 @@ All fonts were obtained from Google Fonts Library.
 </ul><hr>
 
 # **Testing**
+<ul>
+1. Django error message after adding submit guitar form:<br>
+<li>CSRF token has been added as {{ csrf_token }} instead of {% csrf_token %}</li>
+2. Invalid syntax error after creating the GuitarsPagePost:<br>
+<li>A comma was missing on 'guitars': guitars,</li>
+3. Django error message after adding the GuitarsPage:
+<li>I supposed to declare the model name to anywhere but not the class name.</li>
+4. After deployment, all website images and style was missing.
+<li>Tutors told me that i have to command: python3 manage.py collectstatic<br>
+- After every deployment to Heroku.</li>
+5. Am I Responsive website wasn't worked with my Heroku link.
+<li>I've imported temporarly the xframe_options_except and declared up-front of my main-page. I did my responsive website screenshot and after removed the import and declaration.</li>
+</ul>
 
 ### **Validator Testing**
 <ul>
