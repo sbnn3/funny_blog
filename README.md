@@ -15,6 +15,7 @@ To follow all the news from the blog and last but not least to notice the many g
 <li><a href="#design">Design</a></li>
 <li><a href="#features">Features</a></li>
 <li><a href="#testing">Testing</a></li>
+<li><a href="#unfixed-bugs">Unfixed Bugs</a></li>
 <li><a href="#technologies-user">Technologies User</a></li>
 <li><a href="#deployment">Deployment</a></li>
 <li><a href="#credits">Credits</a></li>
@@ -88,3 +89,159 @@ All fonts were obtained from Google Fonts Library.
 <li><strong>Bebas Neue</strong> - Logo/Navbar</li>
 </ul>
 </p><hr>
+
+# **Features**
+
+### **Home Page**
+![Responsive](/static/images/readme_img/home_page_live.png "Home Page")<hr>
+
+### **Desktop Navigation Bar**
+![Responsive](/static/images/readme_img/nav-bar.png "Desktop Navigation Bar")<hr>
+
+### **Mobile Navigation Bar**
+![Responsive](/static/images/readme_img/nav-bar-mob.png "Mobile Navigation Bar")<hr>
+
+### **About Page**
+![Responsive](/static/images/readme_img/about_page.png "About Page")<hr>
+
+### **Guitars Page**
+![Responsive](/static/images/readme_img/guitars_page_live.png "Guitar Page")<hr>
+
+### **Guitars Post**
+![Responsive](/static/images/readme_img/guitars_post_live.png "Guitar Post")<hr>
+
+### **Blog Page**
+![Responsive](/static/images/readme_img/blog_page.png "Blog Page")<hr>
+
+### **Blog Post**
+![Responsive](/static/images/readme_img/blog_post.png "Blog Post")<hr>
+
+### **Sign In Page**
+![Responsive](/static/images/readme_img/sign-in.png "Sign In")<hr>
+
+### **Sign Out Page**
+![Responsive](/static/images/readme_img/sign-out.png "Sign Out")<hr>
+
+### **Sign Up Page**
+![Responsive](/static/images/readme_img/register.png "Sign Up")<hr>
+
+### **Submit Guitar Button**
+<ul>
+<li>The "Submit Guitar" button can be found on guitars page and is available only for signed in users.</li>
+</ul><hr>
+
+![Responsive](/static/images/readme_img/submit_guitarpost.png "Submit Guitar Post")<hr>
+
+### **Edit & Delete Post**
+<ul>
+<li>The "Edit & Delete" buttons can be found on guitars post page and is available only for signed in users.</li>
+</ul><hr>
+
+![Responsive](/static/images/readme_img/edit-delete-post.png "Edit Delete Post")<hr>
+
+### **Features left to implement**
+<ul>
+<li>Online Shop</li>
+<li>Artist Profile</li>
+<li>Password Reset</li>
+<li>Contact Page</li>
+</ul><hr>
+
+# **Testing**
+
+### **Validator Testing**
+<ul>
+<li>HTML files pass through the <a href="https://validator.w3.org/">W3C Validator</a> with not HTML issues.</li>
+<li>CSS file pass through the <a href="hhttps://jigsaw.w3.org/css-validator/">Jigsaw Validator</a> with not CSS issues.</li>
+
+![Responsive](/static/images/readme_img/css-validator.png "CSS Validator")<hr>
+
+<li>Page has a very good Accessibility on Lighthouse!</li>
+
+![Responsive](/static/images/readme_img/lighthouse.png "Lighthouse")<hr>
+
+<li>Python files passed through <a href="http://pep8online.com/">PEP8 Online</a></li>
+</ul><hr>
+
+# **Unfixed Bugs**
+<p>After Heroku deployment i've found few bugs that cannot be fixed, please, see below:</p>
+<ul>
+<li><a href="https://sbnn3-funny-blog.herokuapp.com/music/guitars/">Guitars Page</a>, when you are not sign in is different sizes of guitars cards. When you're sign in, everything is how supposed to be.</li>
+<li><a href="https://sbnn3-funny-blog.herokuapp.com/accounts/logout/">Logout Page</a>, when you are trying to logout the page becomes smaller and footer can be found at middle of page.</li>
+<li><a href="https://sbnn3-funny-blog.herokuapp.com/new-guitars-store-opened-in-lucan/">Blog Post</a>, Blogs Images in Post doesn't appear anymore, even if the code is totally correct.</li>
+</ul><hr>
+
+# **Technologies User**
+
+### **Main Languages Used**
+
+<ul>
+<li>HTML 5</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Python</li>
+<li>Django</li>
+<li>SQL - Postgres</li>
+</ul><hr>
+
+### **Framerworks, Libraries & Programs User**
+<ul>
+<li>Google Fonts - For the font families.</li>
+<li>Font Awesome - Icons to the social links in the footer side.</li>
+<li>GitPod - HTML,CSS,Python,JavaScript,Django - Workspace.</li>
+<li>GitHub - To store my repository.</li>
+<li>Balsamiq - Wireframes App.</li>
+<li>Am I Responsive? - To make sure that project looks good to all devices.</li>
+<li>Django</li>
+<li>Bootstrap</li>
+<li>DrawSQL</li>
+</ul><hr>
+
+### **Installed Packages**
+<ul>
+<li> 'django<4' gunicorn </li>
+<li>dj_database_url psycopg2</li>
+<li>dj3-cloudinary-storage</li>
+<li>django-summernote <a href="https://summernote.org/">link</a></li>
+<li>django-allauth <a href="https://django-allauth.readthedocs.io/en/latest/">link</a></li>
+<li>django-crispy-forms <a href="https://django-crispy-forms.readthedocs.io/en/latest/index.html">link</a></li>
+</ul><hr>
+
+# **Deployment**
+<p>The website has been deployed to Heroku. Please, see below the steps:</p>
+<ul>
+<li>Install Django & Gunicorn: pip3 install 'django<4' gunicorn</li>
+<li>Install Django Database & Psycopg: pip3 install dj_database_url psycopg2</li>
+<li>Install Cloudinary: pip3 install dj3-cloudinary-storage</li>
+<li>Creating the requirements.txt file with the following command: pip3 freeze --local > requirements.txt</li>
+<li>Django Project was created with follow command: django-admin startproject funny_blog .</li>
+<li>The Blog app was created with follow command: python3 manage.py startapp blog</li>
+<li>App name have to be declared to settings.py file, section APPS.</li>
+<li>Migrations command: python3 manage.py migrate</li>
+<li>Access Heroku and created new app using Europe as Location.</li>
+<li>Added the Heroku Postgres Database to Resources tab.</li>
+<li>Access the Heroku App Settings to add the follow keys/values to the configvars:</li>
+1. SECRET_KEY | Balaioara1967!<br>
+2. PORT | 8000<br>
+3. CLOUDINARY_URL | API environment variable<br>
+4. DATABASE_URL | the link provided by Heroku<br>
+<li>Added the DATABASE_URL, CLOUDINARY_URL, SECRET_KEY to the env.py file.</li>
+<li>Added the DATABASE_URL, CLODUINARY_URL, SECRET_KEY to the settings.py file.</li>
+<li>Added an import os at the top of env.py file.</li>
+<li>Added Heroku link to ALLOWED_HOSTS in settings.py file.</li>
+<li>Created the Procfile.</li>
+<li>Pushed the project to GitHub.</li>
+<li>Connect the GitHub with Heroku throught the Deploy tab.</li>
+<li>Connect my GitHub project and after click "Deploy".</li>
+<li>Don't forget to collect static on gitpod after deployment.</li>
+<li><a href="https://sbnn3-funny-blog.herokuapp.com/">Funny Blog</a> :)</li>
+</ul><hr>
+
+# **Credits**
+<ul>
+<li><a href="https://codeinstitute.net/">Code Institute</a> - for all course material leading up to this project.</li>
+<li><a href="https://github.com/SephTheOverwitch">Martina Terlevic</a> -  My mentor at Code Institute for permanently support and feedback.</li>
+<li>Code Institute Tututor Team - For help during the lessons and challenges</li>
+</ul>
+
+
