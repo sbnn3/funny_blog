@@ -1,9 +1,12 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.views.decorators.clickjacking import xframe_options_exempt
 from .models import BlogPost
 from .forms import CommentForm
 
+
+@xframe_options_exempt 
 def home_page(request):
     return render(request, 'index.html')
 
