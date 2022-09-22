@@ -165,7 +165,7 @@ All fonts were obtained from Google Fonts Library.
 ### **Validator Testing**
 <ul>
 <li>HTML files pass through the <a href="https://validator.w3.org/">W3C Validator</a> with not HTML issues.</li>
-<li>CSS file pass through the <a href="hhttps://jigsaw.w3.org/css-validator/">Jigsaw Validator</a> with not CSS issues.</li>
+<li>CSS file pass through the <a href="https://jigsaw.w3.org/css-validator/">Jigsaw Validator</a> with not CSS issues.</li>
 
 ![Responsive](/static/images/readme_img/css-validator.png "CSS Validator")<hr>
 
