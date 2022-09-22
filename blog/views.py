@@ -12,13 +12,18 @@ def about_page(request):
     return render(request, 'about.html')
 
 class BlogPage(generic.ListView):
+    """
+    Blog Page View
+    """
     model = BlogPost
     queryset = BlogPost.objects.filter(status=1).order_by('-created_on')
     template_name = 'blog.html'
     paginate_by = 6
 
 class BlogPostPage(View):
-
+    """
+    BlogPostPage View
+    """
     def get(self, request, slug, *args, **kwargs):
         queryset = BlogPost.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -72,7 +77,9 @@ class BlogPostPage(View):
         )
 
 class LikeBlogPost(View):
-
+    """
+    LikeBlogPost View
+    """
     def post(self, request, slug):
         post = get_object_or_404(BlogPost, slug=slug)
 

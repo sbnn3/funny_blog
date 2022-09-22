@@ -3,7 +3,9 @@ from .models import Guitars
 
 
 class SubmitGuitarForm(forms.ModelForm):
-
+    """
+    SubmitGuitarForm Model
+    """
     class Meta:
         model = Guitars
         fields = (

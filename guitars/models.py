@@ -5,7 +5,9 @@ from cloudinary.models import CloudinaryField
 STATUS = ((0, "Draft"), (1, "Published"))
 
 class Guitars(models.Model):
-
+    """
+    Guitars Model
+    """
     guitar_model = models.CharField(max_length=50, unique=True, null=False, blank=False)
     slug = models.SlugField(max_length=50, unique=True, null=False, blank=False)
     artist = models.ForeignKey(User, on_delete=models.CASCADE, related_name='guitars')

@@ -4,6 +4,9 @@ from .models import Guitars
 
 @admin.register(Guitars)
 class GuitarsAdmin(admin.ModelAdmin):
+    """
+    Guitars Model to Admin Panel
+    """
     prepopulated_fields = {'slug': ('guitar_model',)}
     list_display = ('artist', 'guitar_model', 'status', 'price', 'created_on')
     list_filter = ('artist', 'created_on')

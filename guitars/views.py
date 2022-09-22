@@ -7,6 +7,9 @@ from .forms import SubmitGuitarForm
 
 
 class GuitarsPage(generic.ListView):
+    """
+    GuitarsPage View
+    """
     model = Guitars
     queryset = Guitars.objects.filter(status=1).order_by('-created_on')
     template_name = 'guitars.html'
@@ -62,7 +65,9 @@ def delete_guitar_post(request, slug):
 
 
 class GuitarsPagePost(View):
-
+    """
+    GuitarsPagePost View
+    """
     def get(self, request, slug, *args, **kwargs):
         queryset = Guitars.objects.filter(status=1)
         guitars = get_object_or_404(queryset, slug=slug)
@@ -81,7 +86,9 @@ class GuitarsPagePost(View):
 
 
 class LikeGuitarPost(View):
-
+    """
+    LikeGuitarPost View
+    """
     def post(self, request, slug):
         guitars = get_object_or_404(Guitars, slug=slug)
 
